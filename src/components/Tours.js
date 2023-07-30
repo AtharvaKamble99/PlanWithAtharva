@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+
 function Tours({ tours, removeTourHandler }) {
   return (
     <div className="container">
@@ -21,4 +22,5 @@ function Tours({ tours, removeTourHandler }) {
   );
 }
 
+//exporting the tours component
 export default Tours;

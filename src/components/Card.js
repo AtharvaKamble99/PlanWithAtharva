@@ -20,12 +20,14 @@ function Card(props, removeTourHandler) {
     <div className="card">
       <img src={props.image} className="image" alt="none"></img>
       <div className="tour-info">
+        {/* tour deatils has the PRICE and THE NAME OF PLACE */}
         <div className="tour-details">
           <h4 className="tour-price"> ₹{props.price}</h4>
           <h4 className="tour-name">{props.name}</h4>
         </div>
         <div className="descritption">
           {description}
+          {/* It will cause the read-more , show-less toggle */}
           <span className="read-more" onClick={readmoreHandler}>
             {readmore ? `   Show Less` : `   Read More`}
           </span>
