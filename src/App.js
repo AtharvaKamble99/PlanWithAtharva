@@ -7,13 +7,24 @@ import data from "./Data";
 //Function App
 const App = () => {
   //remove Tour Handler
+  const [tours, setTours] = useState(data);
   function removeToolHandler(id) {
     const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
   }
 
+  if (tours.length === 0) {
+    return (
+      <div className="refresh">
+        <h1>No tours Left</h1>
+        <button className="btn-white" onClick={() => setTours(data)}>
+          Referesh
+        </button>
+      </div>
+    );
+  }
   //UseState
-  const [tours, setTours] = useState(data);
+
   return (
     <div>
       <Tours tours={tours} removeToolHandler={removeToolHandler}></Tours>

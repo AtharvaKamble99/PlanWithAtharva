@@ -93,3 +93,24 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+.refresh {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-white {
+  margin-top: 18px;
+  padding: 10px 80px;
+  border: 10px solid white;
+
+  cursor: pointer;
+}
+.btn-white:hover {
+  background-color: red;
+  color: black;
+  transition: all 0.5s;
+}
